@@ -17,7 +17,11 @@ export NODE_PORT=$(sudo kubectl get --namespace default -o jsonpath="{.spec.port
 echo $NODE_PORT <br/>
 export NODE_IP=$(sudo kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}") <br/>
 echo $NODE_IP - 10.0.0.52 (this is not an extenal IP address, since this VM is instantiated from Openstack I've used corresponding floating IP addr-10.211.1.130) <br/>
-echo http://$NODE_IP:$NODE_PORT -Check the grafana is up and running <br/>
+echo http://$NODE_IP:$NODE_PORT - Check the grafana is up and running <br/>
+
+login to grafana using defalt credentials  <br/>
+username : admin <br/>
+password : <kubectl get secret --namespace default mygrafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo> <br/>
 
 Upgade grafana helm pacakge
 ---------------------------
