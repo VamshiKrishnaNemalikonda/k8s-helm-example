@@ -48,20 +48,20 @@ helm lint myhelmchartplanet - validates helm pacakge syntax ?
 
 Package and install custom helm charts
 --------------------------------------
-helm package myhelmchartplanet/
-Successfully packaged chart and saved it to: /home/ubuntu/vamshi/helm_charts/myhelmchartplanet-0.1.0.tgz
+helm package myhelmchartplanet/ <br />
+Successfully packaged chart and saved it to: /home/ubuntu/vamshi/helm_charts/myhelmchartplanet-0.1.0.tgz <br />
 
-helm search myhelmchartplanet
-NAME                    CHART VERSION   APP VERSION     DESCRIPTION
-local/myhelmchartplanet 0.1.0           1.0             A Helm chart for Kubernetes
+helm search myhelmchartplanet <br />
+NAME                    CHART VERSION   APP VERSION     DESCRIPTION <br />
+local/myhelmchartplanet 0.1.0           1.0             A Helm chart for Kubernetes <br />
 
-helm inspect myhelmchartplanet
-helm install myhelmchartplanet
-kubectl get pods
-kubectl describe svc oily-vulture-myhelmchartplanet
-helm list
-NAME            REVISION        UPDATED                         STATUS          CHART                   APP VERSION     NAMESPACE
-oily-vulture    1               Tue Apr 14 11:44:15 2020        DEPLOYED        myhelmchartplanet-0.1.0 1.0             default
+helm inspect myhelmchartplanet <br />
+helm install myhelmchartplanet <br />
+kubectl get pods <br /> 
+kubectl describe svc oily-vulture-myhelmchartplanet <br />
+helm list <br />
+NAME            REVISION        UPDATED                         STATUS          CHART                   APP VERSION     NAMESPACE <br />
+oily-vulture    1               Tue Apr 14 11:44:15 2020        DEPLOYED        myhelmchartplanet-0.1.0 1.0             default <br />
 
 Upgrade custom helm pacakge
 ---------------------------
